@@ -20,12 +20,12 @@ class Post(Base):
     
     @hybrid_property
     def vote_count(self):
-        return func.count(Vote.id).filter(Vote.post_id == self.id)
+        return len([vote for vote in self.votes if vote.post_id == self.id])
 
     @vote_count.expression
     def vote_count(cls):
         return (
-            select([func.count(Vote.id)])
+            select([func.count()])
             .where(Vote.post_id == cls.id)
             .label('vote_count')
         )
