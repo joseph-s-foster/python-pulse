@@ -81,7 +81,7 @@
 
   ## Link to site
 
-  - Coming soon
+  - https://python-newsfeed-project-6c9c028a24f9.herokuapp.com/
 
   ## Screenshot
 
