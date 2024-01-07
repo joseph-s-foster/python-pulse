@@ -36,9 +36,17 @@ button:hover {
   background-color: #3486eb;
 }
 
+.home {
+  margin-left: 2%;
+}
+
+.session {
+  margin-right: 2%;
+}
+
 .post-list {
-  margin: 0;
-  padding: 0;
+  margin: 2%;
+  padding: 1%;
 }
 
 textarea, input {

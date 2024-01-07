@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
+  <title>Python Newsfeed</title>
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
   <div class="wrapper">
     <header>
-      <h1>
-        <a href="/">Just Tech News</a>
+      <h1 class="home">
+        <a href="/">Python Newsfeed</a>
       </h1>
-      <nav>
+      <nav class="session">
         {% if loggedIn == True %}
           {% if currentRoute != '/dashboard' %}
-            <a href="/dashboard">dashboard</a>
+            <a href="/dashboard">Dashboard</a>
           {% endif %}
-          <button id="logout" class="btn-no-style">logout</button>
+          <button id="logout" class="btn-no-style">Logout</button>
         {% else %}
-          <a href="/login">login</a>
+          <a href="/login">Login</a>
         {% endif %}
       </nav>
     </header>
@@ -29,7 +29,7 @@
       {% block body %}{% endblock %}
     </main>
     <footer>
-      Thanks for visiting!
+      Made with ❤️ by Joe Foster
     </footer>
   </div>
   
