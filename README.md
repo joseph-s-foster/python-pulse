@@ -81,7 +81,7 @@
 
   ## Link to site
 
-  - https://python-newsfeed-project-6c9c028a24f9.herokuapp.com/
+  - https://python-pulse-a33bae0b4181.herokuapp.com/
 
   ## Screenshot
 
