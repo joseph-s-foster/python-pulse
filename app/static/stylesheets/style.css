@@ -74,6 +74,13 @@ button:hover {
   padding: 2%;
 }
 
+@media screen and (max-width: 480px) {
+  .post-list {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
 textarea,
 input {
   padding: 0.5%;
