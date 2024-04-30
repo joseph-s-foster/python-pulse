@@ -2,38 +2,58 @@
   box-sizing: border-box;
 }
 
-body, html {
+:root {
+  --links: #eab70e;
+}
+
+body,
+html {
   height: 100%;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #333;
+  color: #ffffff;
+  background-color: black;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+  margin: 0; /* Remove default margin */
+}
+
+.image {
+  height: 100vh; /* Set height to 100% of viewport height */
+  width: 100%; /* Set width to 100% of its container */
+  object-fit: cover; /* Ensure the image covers the entire container */
+  opacity: 0.75;
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #ffffff;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
 }
 
 a:hover {
-  color: #3486eb;
+  color: #eab70e;
 }
 
 button {
-  background-color: #225ca3;
+  background-color: var(--links);
   border: 0;
   padding: 1%;
   color: white;
   font-weight: bold;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
 }
 
 button:hover {
-  background-color: #3486eb;
+  background-color: #eaac0e;
 }
 
 .home {
@@ -44,18 +64,25 @@ button:hover {
   margin-right: 2%;
 }
 
+.padding {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
 .post-list {
   margin: 2%;
-  padding: 1%;
+  padding: 2%;
 }
 
-textarea, input {
-  padding: .5%;
+textarea,
+input {
+  padding: 0.5%;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
   border: 1px solid #3486eb;
 }
@@ -74,9 +101,9 @@ form label {
 }
 
 .wrapper {
+  flex: 1;
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -87,16 +114,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1%;
+  padding: 1%;
 }
 
 header h1 {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 main {
   flex: 1;
-  padding: 2% 4%;
+  padding: 2% 0%;
 }
 
 .btn-no-style {
@@ -105,16 +132,16 @@ main {
   padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
+  color: #ffffff;
   font-size: 100%;
   font-weight: bold;
-  transition: color .1s;
+  transition: color 0.1s;
   margin-left: 16px;
 }
 
 .btn-no-style:hover {
   background: none;
-  color: #3486eb;
+  color: var(--links);
 }
 
 .delete-post-btn {
@@ -143,7 +170,7 @@ main {
 
 .upvote-btn {
   background-color: #197d0f;
-  transition: background-color .1s;
+  transition: background-color 0.1s;
 }
 
 .upvote-btn:hover {
@@ -157,16 +184,17 @@ main {
 .comment {
   padding: 1%;
   margin-bottom: 1%;
+  color: #ffffff;
 }
 
 .comment:nth-child(odd) {
-  background-color: #fff5eb;
+  background-color: black;
 }
 
 .comment .meta {
   font-size: 90%;
-  margin-bottom: .5%;
-  opacity: .6;
+  margin-bottom: 0.5%;
+  opacity: 0.6;
 }
 
 .new-post-form input {
@@ -182,5 +210,6 @@ footer {
   display: flex;
   justify-content: center;
   padding: 1%;
-  font-size: 110%;
+  margin-top: auto; /* Push the footer to the bottom */
+  width: 100%; /* Make the footer span the full width of the viewport */
 }

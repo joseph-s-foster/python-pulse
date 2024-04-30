@@ -1,6 +1,9 @@
 {% extends "layout/main.html" %}
 
 {% block body %}
+
+<img class="image" src="{{ url_for('static', filename='images/background.png') }}"/>
+
 <ol class="post-list">
   {% for post in posts %}
   <li>

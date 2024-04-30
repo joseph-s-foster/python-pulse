@@ -1,41 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Pulse</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Python Pulse</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+  </head>
 
-<body>
-  <div class="wrapper">
-    <header>
-      <h1 class="home">
-        <a href="/">Python Pulse</a>
-      </h1>
-      <nav class="session">
-        {% if loggedIn == True %}
-          {% if currentRoute != '/dashboard' %}
-            <a href="/dashboard">Dashboard</a>
+  <body>
+      <header>
+        <h1 class="home">
+          <a href="/">Python Pulse</a>
+        </h1>
+        <nav class="session">
+          {% if loggedIn == True %}
+            {% if currentRoute != '/dashboard' %}
+              <a href="/dashboard">Dashboard</a>
+            {% endif %}
+            <button id="logout" class="btn-no-style">Logout</button>
+          {% else %}
+            <a href="/login">Login</a>
           {% endif %}
-          <button id="logout" class="btn-no-style">Logout</button>
-        {% else %}
-          <a href="/login">Login</a>
-        {% endif %}
-      </nav>
-    </header>
-    <main>
-      {% block body %}{% endblock %}
-    </main>
-    <footer>
-      <a href="https://github.com/joseph-s-foster/python-pulse">GitHub</a>
-    </footer>
-  </div>
-  
-  {% if loggedIn %}
-  <script src="/javascript/logout.js"></script>
-  {% endif %}
-</body>
+        </nav>
+      </header>
+      
+      <main>
+        {% block body %}{% endblock %}</main>
+      <footer>
+        <a href="https://github.com/joseph-s-foster/python-pulse">GitHub</a>
+      </footer>
+    </div>
 
+    {% if loggedIn %}
+      <script src="/javascript/logout.js"></script>
+    {% endif %}
+  </body>
 </html>
