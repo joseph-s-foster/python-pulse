@@ -10,13 +10,11 @@
     Stay inspired.<br />
     Stay informed.
   </h1>
-  <a class="click" href="#">Explore articles</a>
+  <a href="#articles" class="explore" onClick="handleScroll(event)">Explore</a>
 </section>
 
-<section>
-  <h2>
-    Articles
-  </h2>
+<section id="articles">
+  <h2>Articles</h2>
 </section>
 
 <ol class="post-list">
@@ -24,4 +22,6 @@
   <li>{% include "partials/post-info.html" %}</li>
   {% endfor %}
 </ol>
+<script src="/javascript/scroll.js"></script>
+
 {% endblock %}
