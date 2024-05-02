@@ -61,16 +61,6 @@ a:hover {
   font-size: 4rem;
 }
 
-@media screen and (max-width: 720px) {
-  .cta {
-    top: 30%;
-    right: 5%;
-  }
-  .cta h1 {
-    font-size: 3rem;
-  }
-}
-
 .explore {
   margin-right: 16px;
   transition: background-color 0.33s ease-in-out, color 0.33s ease-in-out;
@@ -84,6 +74,19 @@ a:hover {
 .explore:hover {
   background-color: #ffffff;
   color: #000;
+}
+
+@media screen and (max-width: 720px) {
+  .cta {
+    top: 30%;
+    right: 5%;
+  }
+  .cta h1 {
+    font-size: 3rem;
+  }
+  .explore {
+    font-size: 1.2rem;
+  }
 }
 
 .articles h2 {
