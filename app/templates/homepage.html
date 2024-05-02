@@ -1,14 +1,27 @@
-{% extends "layout/main.html" %}
+{% extends "layout/main.html" %} {% block body %}
 
-{% block body %}
+<img
+  class="image"
+  src="{{ url_for('static', filename='images/background.png') }}"
+/>
 
-<img class="image" src="{{ url_for('static', filename='images/background.png') }}"/>
+<section class="cta">
+  <h1>
+    Stay inspired.<br />
+    Stay informed.
+  </h1>
+  <a class="click" href="#">Explore articles</a>
+</section>
+
+<section>
+  <h2>
+    Articles
+  </h2>
+</section>
 
 <ol class="post-list">
   {% for post in posts %}
-  <li>
-    {% include "partials/post-info.html" %}
-  </li>
+  <li>{% include "partials/post-info.html" %}</li>
   {% endfor %}
 </ol>
 {% endblock %}
