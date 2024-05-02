@@ -77,6 +77,10 @@ a:hover {
   color: #000;
 }
 
+.articles h2 {
+  margin-left: 3%;
+}
+
 button {
   background-color: var(--links);
   border: 0;
@@ -106,8 +110,7 @@ button:hover {
 }
 
 .post-list {
-  margin: 2%;
-  padding: 2%;
+  margin-left: 1%;
 }
 
 @media screen and (max-width: 480px) {
@@ -198,7 +201,7 @@ main {
 }
 
 .post {
-  margin-bottom: 2%;
+  margin-bottom: 16px;
   line-height: 150%;
 }
 
@@ -251,12 +254,14 @@ main {
 }
 
 footer {
+  background-color: #0b0b0b;
   text-align: center;
-  border-top: 1px solid #ccc;
   display: flex;
   justify-content: center;
-  padding: 1%;
+  padding: 3%;
   margin-top: auto;
-  margin-left: 3%;
-  margin-right: 3%;
+}
+
+footer a {
+  color: grey;
 }
