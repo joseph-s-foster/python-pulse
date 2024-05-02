@@ -3,7 +3,7 @@
 }
 
 :root {
-  --links: #eab70e;
+  --links: #a28a31;
 }
 
 body,
@@ -38,42 +38,51 @@ a {
 }
 
 a:hover {
-  color: #eab70e;
+  color: var(--links);
 }
 
 .cta {
   position: absolute;
   top: 38%;
-  right: 20%;
+  right: 12%;
   z-index: 1;
   text-align: right;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1260px) {
   .cta {
-    top: 30%;
-    right: 5%;
+    top: 27%;
   }
 }
 
 .cta h1 {
   margin: 0;
-  padding: 1em 0;
-  font-size: 2.5rem;
+  padding: .5em 0;
+  font-size: 4rem;
+}
+
+@media screen and (max-width: 720px) {
+  .cta {
+    top: 28%;
+    right: 5%;
+  }
+  .cta h1 {
+    font-size: 3rem;
+  }
 }
 
 .explore {
+  margin-right: 16px;
   transition: background-color 0.33s ease-in-out, color 0.33s ease-in-out;
-  background-color: #000;
-  color: #dddddd;
+  color: #ffffff;
   padding: 12px;
-  font-size: 1.25rem;
-  border: solid #dddddd 2px;
+  font-size: 1.5rem;
+  border: solid #ffffff 3px;
   border-radius: 6px;
 }
 
 .explore:hover {
-  background-color: #dddddd;
+  background-color: #ffffff;
   color: #000;
 }
 
