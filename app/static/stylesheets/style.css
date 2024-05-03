@@ -88,18 +88,20 @@ a:hover {
 }
 
 button {
-  background-color: var(--links);
-  border: 0;
-  padding: 1%;
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.1s;
-  cursor: pointer;
-  border-radius: 5px;
+  width: 298px;
+  margin-top: 12px;
+  background-color: black;
+  transition: background-color 0.33s ease-in-out, color 0.33s ease-in-out;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 1.5rem;
+  border: solid #ffffff 3px;
+  border-radius: 6px;
 }
 
 button:hover {
-  background-color: #eaac0e;
+  background-color: #ffffff;
+  color: #000;
 }
 
 .home {
@@ -128,8 +130,14 @@ button:hover {
 
 textarea,
 input {
-  padding: 0.5%;
-  border-radius: 5px;
+  color: #000;
+  font-size: 1.5rem;
+  padding: 4%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  border-radius: 6px;
+  height: 48px;
+  width: 300px;
   /* border: 1px solid #ccc; */
 }
 
@@ -145,11 +153,22 @@ textarea {
 }
 
 form > div {
-  margin-bottom: 2%;
+  margin-top: 4%;
+  margin-bottom: 4%;
 }
 
 form label {
   display: block;
+  height: 4%;
+}
+
+.forms{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
 }
 
 .wrapper {
@@ -195,7 +214,7 @@ main {
 
 .btn-no-style:hover {
   background: none;
-  color: var(--links);
+  color: #ffffff;
 }
 
 .delete-post-btn {
