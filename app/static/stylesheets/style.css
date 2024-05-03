@@ -3,7 +3,7 @@
 }
 
 :root {
-  --links: #a28a31;
+  --links: #b4972f;
 }
 
 body,
@@ -89,7 +89,7 @@ a:hover {
 
 button {
   width: 298px;
-  margin-top: 12px;
+  margin-top: 8px;
   background-color: black;
   transition: background-color 0.33s ease-in-out, color 0.33s ease-in-out;
   color: #ffffff;
@@ -113,6 +113,7 @@ button:hover {
 }
 
 .padding {
+  margin-top: 60px;
   padding-left: 3%;
   padding-right: 3%;
 }
@@ -153,8 +154,8 @@ textarea {
 }
 
 form > div {
-  margin-top: 4%;
-  margin-bottom: 4%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 form label {
@@ -165,10 +166,15 @@ form label {
 .forms{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 60px;
+  /* justify-content: center; */
   align-items: center;
-  height: 100vh;
   font-size: 1.5rem;
+}
+
+.forms h2 {
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .wrapper {
@@ -283,7 +289,7 @@ footer {
   text-align: center;
   display: flex;
   justify-content: center;
-  padding: 3%;
+  padding: 2%;
   margin-top: auto;
 }
 
