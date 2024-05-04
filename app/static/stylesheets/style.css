@@ -137,6 +137,13 @@ ol {
   padding-inline-end: 2%;
 }
 
+@media screen and (max-width: 480px) {
+  ol {
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+  }
+}
+
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
