@@ -4,13 +4,13 @@ async function newFormHandler(event) {
   const title = document.querySelector('input[name="post-title"]').value;
   const fullUrl = document.querySelector('input[name="post-url"]').value;
   const urlObject = new URL(fullUrl);
-  const mainUrl = urlObject.hostname;
+  const mainUrl = urlObject.hostname; // Extracting the hostname
 
   const response = await fetch(`/api/posts`, {
     method: 'POST',
     body: JSON.stringify({
       title,
-      post_url: mainUrl 
+      post_url: mainUrl // Using the main URL
     }),
     headers: {
       'Content-Type': 'application/json'
