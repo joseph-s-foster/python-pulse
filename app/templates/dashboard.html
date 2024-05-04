@@ -1,23 +1,22 @@
 {% extends "layout/main.html" %} {% block body %}
-<div class="forms, padding">
+<div class="forms">
   <section>
-    <h2>Create New Post</h2>
 
-    <form class="new-post-form">
-      <div>
+    <form class="forms">
+      <h2>Create New Post</h2>
         <!-- <label for="post-title">Title</label> -->
         <input type="text" id="post-title" name="post-title" placeholder="Article title"/>
-      </div>
-      <div>
+      
+    
         <!-- <label for="post-url">Link</label> -->
         <input id="post-url" name="post-url" placeholder="Link to article" />
-      </div>
+     
       <button type="submit" class="btn">Create</button>
     </form>
   </section>
 
   {% if posts|length > 0 %}
-  <section>
+  <section class="padding">
     <h2>Your Posts</h2>
     <ol>
       {% for post in posts %}

@@ -85,6 +85,7 @@ a:hover {
 
 .articles h2 {
   margin-left: 3%;
+  font-size: 2rem;
 }
 
 button {
@@ -110,12 +111,25 @@ button:hover {
 
 .session {
   margin-right: 2%;
+  width: 180px;
+}
+
+.session a{
+  padding-left: 10%;
+}
+
+.session a:hover {
+  color: var(--links);
 }
 
 .padding {
   margin-top: 60px;
   padding-left: 3%;
   padding-right: 3%;
+}
+
+.padding h2 {
+  font-size: 2rem;
 }
 
 .post-list {
@@ -232,6 +246,7 @@ main {
 }
 
 .post {
+  font-size: 1rem;
   margin-bottom: 16px;
   line-height: 150%;
 }
@@ -289,7 +304,7 @@ footer {
   text-align: center;
   display: flex;
   justify-content: center;
-  padding: 2%;
+  padding: 48px;
   margin-top: auto;
 }
 
