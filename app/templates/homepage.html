@@ -1,28 +1,11 @@
-{% extends "layout/main.html" %} {% block body %}
+{% extends "layout/main.html" %}
 
-<img
-  class="image"
-  src="{{ url_for('static', filename='images/background.png') }}"
-  alt="A background image of a tree python."
-/>
-
-<section class="cta">
-  <h1>
-    Stay inspired.<br />
-    Stay informed.
-  </h1>
-  <a href="#articles" class="explore" onClick="handleScroll(event)">Explore newsfeed</a>
-</section>
-
-<section id="articles" class="articles">
-  <h2>Articles</h2>
-</section>
-
+{% block body %}
 <ol class="post-list">
   {% for post in posts %}
-  <li>{% include "partials/post-info.html" %}</li>
+  <li>
+    {% include "partials/post-info.html" %}
+  </li>
   {% endfor %}
 </ol>
-<script src="/javascript/scroll.js"></script>
-
 {% endblock %}

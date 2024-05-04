@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Python Pulse</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
 
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Pulse</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
 
-  <body>
-      <header>
-        <h1 class="home">
-          <a href="/">Python Pulse</a>
-        </h1>
-        <nav class="session">
-          {% if loggedIn == True %}
-            {% if currentRoute != '/dashboard' %}
-              <a href="/dashboard">Dashboard</a>
-            {% endif %}
-            <a id="logout">Logout</a>
-          {% else %}
-            <a href="/login">Login</a>
-          {% endif %}
-        </nav>
-      </header>
-      
-      <main>
-        {% block body %}{% endblock %}</main>
-      <footer>
-        <a href="https://github.com/joseph-s-foster/python-pulse">GitHub</a>
-      </footer>
-    </div>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <a href="/">Python Pulse</a>
+      </h1>
+      <nav>
+        {% if loggedIn == True %}
+        <a href="/dashboard">dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
+        {% else %}
+        <a href="/login">login</a>
+        {% endif %}
+      </nav>
+    </header>
+    <main>
+      {% block body %}{% endblock %}
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  </div>
+  
+  {% if loggedIn %}
+  <script src="/javascript/logout.js"></script>
+  {% endif %}
+</body>
 
-    {% if loggedIn %}
-      <script src="/javascript/logout.js"></script>
-    {% endif %}
-  </body>
 </html>
