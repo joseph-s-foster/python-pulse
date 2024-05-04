@@ -3,14 +3,19 @@ async function newFormHandler(event) {
 
   const title = document.querySelector('input[name="post-title"]').value;
   const fullUrl = document.querySelector('input[name="post-url"]').value;
-  const urlObject = new URL(fullUrl);
-  const mainUrl = urlObject.hostname; // Extracting the hostname
 
+  // Check if the URL is valid
+  if (!isValidUrl(fullUrl)) {
+    alert("Please enter a valid URL.");
+    return;
+  }
+
+  // Send the full URL to the backend
   const response = await fetch(`/api/posts`, {
     method: 'POST',
     body: JSON.stringify({
       title,
-      post_url: mainUrl // Using the main URL
+      post_url: fullUrl // Send the full URL
     }),
     headers: {
       'Content-Type': 'application/json'
@@ -25,3 +30,12 @@ async function newFormHandler(event) {
 }
 
 document.querySelector('.new-post-form').addEventListener('submit', newFormHandler);
+
+function isValidUrl(url) {
+  try {
+    new URL(url);
+    return true;
+  } catch (error) {
+    return false;
+  }
+}
