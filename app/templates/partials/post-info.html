@@ -1,11 +1,16 @@
 <article class="post">
   <div class="title">
-    <a href="{{post.post_url}}" target="_blank">{{post.title}}</a>
-    <span>({{post.shortened_url}})</span>
+    <a href="{{ post.post_url }}" target="_blank"> {{ post.title }} </a>
+    <br />
+    <span>({{ post.shortened_url }})</span>
+    <br />
+    By {{ post.user.username }} on {{ post.formatted_created_at }}
   </div>
   <div class="meta">
-    {{post.vote_count}} point(s) by {{post.user.username}} on {{post.created_at}}
-    |
-    <a href="/post/{{post.id}}">{{post.comments|length}} comment(s)</a>
+      {{ post.vote_count }} like{% if post.vote_count != 1 %}s{% endif %} |
+    <a href="/post/{{ post.id }}">
+      {{ post.comments|length }} comment{% if post.comments|length != 1 %}s{%
+      endif %}
+    </a>
   </div>
 </article>

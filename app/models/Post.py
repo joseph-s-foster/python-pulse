@@ -35,3 +35,7 @@ class Post(Base):
     def shortened_url(self):
         parsed_url = urlparse(self.post_url)
         return parsed_url.netloc
+    
+    @property
+    def formatted_created_at(self):
+        return self.created_at.strftime("%d %b, %Y")  # Format the date as "04 May, 2024"
