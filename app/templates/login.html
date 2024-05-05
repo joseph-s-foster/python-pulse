@@ -1,6 +1,9 @@
 {% extends "layout/main.html" %}
 
 {% block body %}
+
+<section class="forms">
+  <h2>Welcome</h2>
 <form class="login-form">
   <div>
     <!-- <label for="email-login">email:</label> -->
@@ -11,7 +14,7 @@
     <input type="password" id="password-login" placeholder="Password" />
   </div>
   <div>
-    <button type="submit">login</button>
+    <button type="submit">Login</button>
   </div>
 </form>
 
@@ -29,9 +32,10 @@
     <input type="password" id="password-signup" placeholder="Password"/>
   </div>
   <div>
-    <button type="submit">signup</button>
+    <button type="submit">Signup</button>
   </div>
 </form>
+</section>
 
 <script src="/javascript/login.js"></script>
 {% endblock %}
