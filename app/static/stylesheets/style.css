@@ -138,6 +138,24 @@ button {
   padding-bottom: 8px;
 }
 
+.savedelete {
+  padding-bottom: 12px;
+}
+
+.delete-post-btn {
+  background-color: #f97448;
+  width: 148px;
+  margin-bottom: 8px;
+}
+
+.save-post-btn {
+  width: 148px;
+}
+
+.information {
+  padding-bottom: 8px;
+}
+
 textarea,
 input {
   font-size: 1rem;
@@ -240,14 +258,6 @@ main {
   color: #3486eb;
 }
 
-.delete-post-btn {
-  background-color: #d41414;
-}
-
-.delete-post-btn:hover {
-  background-color: #ff643d;
-}
-
 .post {
   margin-bottom: 16px;
   line-height: 150%;
@@ -268,6 +278,17 @@ ol {
   display: block;
   margin-top: -12px;
   margin-bottom: 24px;
+}
+
+.edit {
+  font-size: 1rem;
+  margin-top: 48px;
+  padding: 24px;
+}
+
+.edit h2 {
+  color: #ffffff;
+  font-size: 1.25rem;
 }
 
 .upvote-btn {
