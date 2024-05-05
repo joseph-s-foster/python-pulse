@@ -8,12 +8,13 @@ html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #333;
+  background-color: black;
+  color: #656565;
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
+  color: #ffffff;
   font-weight: bold;
   transition: color 0.1s;
 }
@@ -44,6 +45,8 @@ button:hover {
 
 textarea,
 input {
+  height: 32px;
+  width: 300px;
   padding: 0.5%;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -189,6 +192,6 @@ footer {
   border-top: 1px solid #ccc;
   display: flex;
   justify-content: center;
-  padding: 1%;
-  font-size: 110%;
+  padding: 2%;
+  font-size: 1.25rem;
 }
