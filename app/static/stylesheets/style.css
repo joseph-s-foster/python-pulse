@@ -46,7 +46,7 @@ a:hover {
 .cta h1 {
   color: #ffffff;
   margin: 0;
-  padding: .5em 0;
+  padding: 0.5em 0;
   font-size: 4rem;
 }
 
@@ -100,23 +100,27 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
-  /* background-color: #181818;
-  color: #ffffff; */
-}
+/* button:hover {
+  background-color: #181818;
+  color: #ffffff;
+} */
 
 .post-list {
   margin: 0;
-  padding: 0, 2%, 0, 2%;
+  padding: 0, 16px, 0, 16px;
+}
+
+.comments {
+  color: #d3eb34;
 }
 
 .forms {
   background-color: #181818;
   width: 332px;
-  padding-bottom: 8px;
+  padding-bottom: 16px;
   border-radius: 4px;
   position: absolute;
-  top: 45%;
+  top: 47%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -125,10 +129,13 @@ button:hover {
   align-items: center;
 }
 
-
 .forms h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #ffffff;
+}
+
+.forms2 {
+  padding-bottom: 8px;
 }
 
 textarea,
@@ -136,15 +143,42 @@ input {
   font-size: 1rem;
   height: 48px;
   width: 300px;
-  padding: 2%;
+  padding: 12px;
   border-radius: 4px;
   border: 1px solid #ccc;
+}
+
+@media screen and (max-width: 480px) {
+  textarea,
+  input,
+  button {
+    width: 100%;
+  }
+
+  .forms {
+    top: 50%;
+    width: 88vw;
+  }
+  .login-form, .signup-form {
+    width: 75vw;
+  }
+}
+
+.dashboard {
+  font-size: 1rem;
+  margin-top: 48px;
+  padding: 24px;
+}
+
+.dashboard h2 {
+  font-size: 1.25rem;
+  color: #ffffff;
 }
 
 textarea:focus,
 input:focus {
   outline: none;
-  border: 1px solid #3486eb;
+  border: 1px solid #d3eb34;
 }
 
 textarea {
@@ -153,7 +187,7 @@ textarea {
 }
 
 form > div {
-  margin-bottom: 2%;
+  margin-bottom: 8px;
 }
 
 form label {
@@ -215,7 +249,7 @@ main {
 }
 
 .post {
-  margin-bottom: 2%;
+  margin-bottom: 16px;
   line-height: 150%;
 }
 
@@ -226,20 +260,14 @@ main {
 }
 
 ol {
-  padding-inline-start: 2%;
-  padding-inline-end: 2%;
-}
-
-@media screen and (max-width: 480px) {
-  ol {
-    padding-inline-start: 16px;
-    padding-inline-end: 16px;
-  }
+  padding-inline-start: 16px;
+  padding-inline-end: 16px;
 }
 
 .edit-link {
   display: block;
-  margin: -1.5% 0 2% 0;
+  margin-top: -12px;
+  margin-bottom: 24px;
 }
 
 .upvote-btn {
