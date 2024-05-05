@@ -116,8 +116,8 @@ button {
 
 .forms {
   background-color: #181818;
-  width: 332px;
-  padding-bottom: 16px;
+  width: 336px;
+  padding-bottom: 12px;
   border-radius: 4px;
   position: absolute;
   top: 47%;
@@ -156,11 +156,11 @@ input {
   }
 
   .forms {
-    top: 50%;
+    top: 45%;
     width: 88vw;
   }
   .login-form, .signup-form {
-    width: 75vw;
+    width: 80vw;
   }
 }
 
