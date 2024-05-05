@@ -114,6 +114,16 @@ button {
   color: #d3eb34;
 }
 
+.commentlist {
+  font-size: 1rem;
+  padding: 0 24px 24px 24px;
+}
+
+.commentlist h2 {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
 .forms {
   background-color: #181818;
   width: 336px;
@@ -142,14 +152,20 @@ button {
   padding-bottom: 12px;
 }
 
+.save-post-btn {
+  width: 148px;
+}
+
 .delete-post-btn {
   background-color: #f97448;
   width: 148px;
   margin-bottom: 8px;
 }
 
-.save-post-btn {
+.like-post-btn {
+  background-color: #f97448;
   width: 148px;
+  margin-bottom: 8px;
 }
 
 .information {
@@ -185,7 +201,8 @@ input {
     margin-bottom: 8px;
   }
   .save-post-btn,
-  .delete-post-btn {
+  .delete-post-btn,
+  .like-post-btn {
     width: 100%;
   }
 }
@@ -197,6 +214,17 @@ input {
 }
 
 .dashboard h2 {
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.addcomments {
+  font-size: 1rem;
+  margin-top: 48px;
+  padding: 24px 24px 0 24px;
+}
+
+.addcomments h2 {
   font-size: 1.25rem;
   color: #ffffff;
 }
@@ -274,7 +302,7 @@ main {
 }
 
 .post {
-  margin-bottom: 16px;
+  padding: 0 24px 24px 24px;
   line-height: 150%;
 }
 
@@ -325,12 +353,13 @@ ol {
 }
 
 .comment {
-  padding: 1%;
+  color: #ffffff;
+  padding: 16px;
   margin-bottom: 1%;
 }
 
-.comment:nth-child(odd) {
-  background-color: #fff5eb;
+.comment:nth-child(even) {
+  background-color: #181818;
 }
 
 .comment .meta {

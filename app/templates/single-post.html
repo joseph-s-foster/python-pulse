@@ -1,6 +1,9 @@
 {% extends "layout/main.html" %}
 
 {% block body %}
+<div class="addcomments">
+<h2>Post</h2>
+</div>
 {% include "partials/post-info.html" %}
 
 {% if loggedIn == True %}
@@ -10,8 +13,8 @@
   </div>
 
   <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
+    <button type="submit" class="save-post-btn">Add Comment</button>
+    <button type="button" class="like-post-btn">Like Post</button>
   </div>
 </form>
 {% endif %}
