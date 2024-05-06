@@ -85,4 +85,4 @@
 
   ## Screenshot
 
-  ![screenshot of webpage](./Screenshot.png)
+  ![screenshot of webpage](./app/static/images/screenshot.png)
