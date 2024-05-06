@@ -75,7 +75,7 @@ a:hover {
     font-size: 3rem;
   }
   .explore {
-
+    margin-left: 3px;
     font-size: 1.25rem;
   }
 }
@@ -245,7 +245,6 @@ textarea {
 @media screen and (max-width: 480px) {
   textarea {
     width: 100%;
-    
   }
 }
 
@@ -336,7 +335,8 @@ ol {
   padding: 0 24px 0 24px;
 }
 
-.edit h2, .edit2 h2 {
+.edit h2,
+.edit2 h2 {
   color: #ffffff;
   font-size: 1.25rem;
 }
