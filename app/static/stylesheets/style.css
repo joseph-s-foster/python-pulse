@@ -50,21 +50,8 @@ a:hover {
   font-size: 4rem;
 }
 
-@media screen and (max-width: 560px) {
-  .cta {
-    top: 55%;
-    left: 8%;
-  }
-  .cta h1 {
-    font-size: 3rem;
-  }
-  .explore {
-    font-size: 1.2rem;
-  }
-}
-
 .explore {
-  margin-right: 16px;
+  margin-right: 20px;
   transition: background-color 0.33s ease-in-out, color 0.33s ease-in-out;
   color: #ffffff;
   padding: 12px;
@@ -76,6 +63,21 @@ a:hover {
 .explore:hover {
   background-color: #ffffff;
   color: #000;
+}
+
+@media screen and (max-width: 560px) {
+  .cta {
+    text-align: left;
+    top: 50%;
+    left: 24px;
+  }
+  .cta h1 {
+    font-size: 3rem;
+  }
+  .explore {
+
+    font-size: 1.25rem;
+  }
 }
 
 .articles {
