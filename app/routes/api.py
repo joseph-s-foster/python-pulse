@@ -168,3 +168,25 @@ def upvote():
     return jsonify(message = 'Upvote failed'), 500
 
   return '', 204
+
+@bp.route('/posts/<int:post_id>/has_upvoted', methods=['GET'])
+@login_required
+def check_upvote(post_id):
+    db = get_db()
+
+    try:
+        # Check if the user has upvoted the post
+        existing_vote = db.query(Vote).filter(
+            Vote.user_id == session.get('user_id'),
+            Vote.post_id == post_id
+        ).first()
+
+        if existing_vote:
+            # If the user has upvoted the post, return a success response
+            return jsonify(has_upvoted=True)
+        else:
+            # If the user hasn't upvoted the post, return a failure response
+            return jsonify(has_upvoted=False)
+    except:
+        print(sys.exc_info()[0])
+        return jsonify(message='Failed to check upvote'), 500
