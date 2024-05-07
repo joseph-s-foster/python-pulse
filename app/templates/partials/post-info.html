@@ -4,9 +4,11 @@
     <br />
     <span>({{ post.shortened_url }})</span>
     <br />
+    <section class="details">
     By {{ post.user.username }} on {{ post.formatted_created_at }}
+    </section>
   </div>
-  <div class="meta">
+  <div>
       {{ post.vote_count }} like{% if post.vote_count != 1 %}s{% endif %} |
     <a href="/post/{{ post.id }}" class="comments">
       {{ post.comments|length }} comment{% if post.comments|length != 1 %}s{%

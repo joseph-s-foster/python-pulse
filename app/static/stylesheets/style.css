@@ -9,11 +9,11 @@ html {
   margin: 0;
   font-family: sans-serif;
   background-color: black;
-  color: #656565;
+  color: #757575;
 }
 
 nav a {
-  padding-left: 16px;
+  margin-left: 16px;
 }
 
 a {
@@ -21,6 +21,7 @@ a {
   color: #ffffff;
   font-weight: bold;
   transition: color 0.1s;
+  cursor: pointer;
 }
 
 a:hover {
@@ -112,6 +113,10 @@ button {
   padding: 0, 16px, 0, 16px;
 }
 
+.details {
+  font-size: 1rem;
+}
+
 .comments {
   color: #d3eb34;
 }
@@ -159,13 +164,13 @@ button {
 }
 
 .delete-post-btn {
-  background-color: #f97448;
+  background-color: #f96248;
   width: 148px;
   margin-bottom: 8px;
 }
 
 .like-post-btn {
-  background-color: #f97448;
+  background-color: #f96248;
   width: 148px;
   margin-bottom: 8px;
 }
@@ -280,11 +285,18 @@ header h1 {
   font-size: 1em;
 }
 
+@media screen and (max-width: 404px) {
+  header a {
+    font-size: 1rem;
+  }
+  
+}
+
 main {
   flex: 1;
 }
 
-.btn-no-style {
+/* .btn-no-style {
   background: none;
   border: none;
   padding: 0;
@@ -300,7 +312,7 @@ main {
 .btn-no-style:hover {
   background: none;
   color: #3486eb;
-}
+} */
 
 .post {
   padding: 0 24px 24px 24px;
@@ -309,8 +321,7 @@ main {
 
 .post .title span {
   font-style: italic;
-  font-size: 90%;
-  color: #7d7d7d;
+  font-size: 1rem;
 }
 
 ol {
@@ -357,17 +368,20 @@ ol {
 .comment {
   color: #ffffff;
   padding: 16px;
-  margin-bottom: 1%;
 }
 
 .comment:nth-child(even) {
   background-color: #181818;
 }
 
-.comment .meta {
-  font-size: 90%;
-  margin-bottom: 0.5%;
-  opacity: 0.6;
+.meta {
+  font-size: .75rem;
+  font-weight: bolder;
+  margin-bottom: 8px;
+}
+
+.comment {
+  font-size: 1rem;
 }
 
 .new-post-form input {
